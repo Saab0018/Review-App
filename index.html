@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <!--      
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+ 
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>Cordova ReviewR</title>
+</head>
+
+
+
+<body>
+
+    <!--   header -->
+
+    <div class="header">
+        <h1>REVIEWЯ</h1>
+
+
+    </div>
+
+
+    <!--    List page-->
+    <section data-role="page" id="list" class="inactive-page">
+
+        <ul class="list-view">
+            <li>Loading...</li>
+        </ul>
+        <div class="add-btn">
+            <a href="#list" class="add"><i class="fa fa-plus fa-3x"></i></a>
+        </div>
+
+    </section>
+
+    <!--    Details page-->
+
+    <section data-role="page" id="details" class="inactive-page">
+
+        <ul>
+            <li><h2>Details</h2></li>
+            <li id="review_Title"></li>
+            <li id="star_rating"></li>
+            <li id="review"></li>
+            <li><img id="detailImage" src="" alt="" width="200" height="150"></li>
+        </ul>
+
+    </section>
+
+    <!--    Add page-->
+    <section data-role="page" id="add" class="inactive-page">
+
+
+        <h2>Add A Review</h1>
+                    
+
+        <form id="">
+            <ul class="form">
+                <li class="add-inputs">
+                    <label for="title" class="title_label">Title</label>
+                    <br>
+                    <input type="text" name="title" id="title">
+                </li>
+
+
+                <li class ="add-inputs">
+                    <label for="rating" class="title_label">Rating</label>
+                    <div class="stars" id="stars">
+                        <input type="radio" name="star" class="star-1" id="star-1" />
+                        <label class="star-1" for="star-1">1</label>
+                        <input type="radio" name="star" class="star-2" id="star-2" />
+                        <label class="star-2" for="star-2">2</label>
+                        <input type="radio" name="star" class="star-3" id="star-3" />
+                        <label class="star-3" for="star-3">3</label>
+                        <input type="radio" name="star" class="star-4" id="star-4" />
+                        <label class="star-4" for="star-4">4</label>
+                        <input type="radio" name="star" class="star-5" id="star-5" />
+                        <label class="star-5" for="star-5">5</label>
+                        <span></span>
+                    </div>
+                </li>
+            
+
+                <li class="add-inputs">
+                    <label for="review_text" class="title_label">Review</label>
+                    <br>
+                    <textarea  name="review_text" id="review_input" cols="30" rows="3" wrap="soft"></textarea>
+                   
+                </li>
+                <li>
+                <div class="pic">
+                 <img id="picture" src="" alt="" width="200" height="150">
+                </div>
+              </li>
+            </ul>
+        </form>
+                            
+
+        <div class="button-wrapper">
+            <button id="cameraBtn">Camera</button>
+        </div>
+        <div class="review-btns">
+            <a href="" class="cancel">Cancel</i></a>
+            <a  id="submit-btn" class="save">Save</i></a>
+        </div>
+        
+        <div>
+        
+        </div>
+
+    </section>
+
+
+
+    <nav class="btn">
+        <a href="#list" class="page-link">Reviews</a>
+    
+        <a href="#add" class="page-link"></i>Add</a>
+
+
+    </nav>
+
+
+
+</body>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+</html>
